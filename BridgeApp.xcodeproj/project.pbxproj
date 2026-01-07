@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F20C5012F0E000100124122 /* HistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F20C5002F0E000100124122 /* HistoryManager.swift */; };
+		1F20C5032F0E000200124122 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F20C5022F0E000200124122 /* HistoryView.swift */; };
 		1F1131872F0DBFAC002BDD00 /* BridgeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1131862F0DBFAC002BDD00 /* BridgeAppTests.swift */; };
 		1F1131912F0DBFAC002BDD00 /* BridgeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1131902F0DBFAC002BDD00 /* BridgeAppUITests.swift */; };
 		1F1131932F0DBFAC002BDD00 /* BridgeAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1131922F0DBFAC002BDD00 /* BridgeAppUITestsLaunchTests.swift */; };
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F20C5002F0E000100124122 /* HistoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryManager.swift; sourceTree = "<group>"; };
+		1F20C5022F0E000200124122 /* HistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		1F1131722F0DBFA7002BDD00 /* BridgeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BridgeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F1131822F0DBFAC002BDD00 /* BridgeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BridgeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F1131862F0DBFAC002BDD00 /* BridgeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeAppTests.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 				1FFC3C1F2F0DF60B00124122 /* .gitignore */,
 				1FFC3C1E2F0DF60B00124122 /* CategorySettingsView.swift */,
 				1FFC3C192F0DF60B00124122 /* CategoryManager.swift */,
+				1F20C5002F0E000100124122 /* HistoryManager.swift */,
+				1F20C5022F0E000200124122 /* HistoryView.swift */,
 				1FFC3C3C2F0DF6FD00124122 /* Assets.xcassets */,
 				1FFC3C422F0DF6FE00124122 /* BridgeApp.swift */,
 				1FFC3C412F0DF6FD00124122 /* ContentView.swift */,
@@ -322,6 +328,8 @@
 				1FFC3C4A2F0DF6FE00124122 /* ContentView.swift in Sources */,
 				1FFC3C312F0DF60B00124122 /* CategorySettingsView.swift in Sources */,
 				1FFC3C482F0DF6FE00124122 /* Models.swift in Sources */,
+				1F20C5012F0E000100124122 /* HistoryManager.swift in Sources */,
+				1F20C5032F0E000200124122 /* HistoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

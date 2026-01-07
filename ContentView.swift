@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @StateObject private var reminderService = ReminderService()
     @StateObject private var categoryManager = CategoryManager()
+    @StateObject private var historyManager = HistoryManager()
     @State private var taskInput = TaskInput()
     @State private var showSuccessAlert = false
     @State private var alertMessage = ""
@@ -90,8 +91,13 @@ struct ContentView: View {
             .navigationTitle("Bridge Capture")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink(destination: CategorySettingsView(categoryManager: categoryManager)) {
-                        Image(systemName: "gear")
+                    HStack {
+                        NavigationLink(destination: HistoryView(historyManager: historyManager)) {
+                            Image(systemName: "clock")
+                        }
+                        NavigationLink(destination: CategorySettingsView(categoryManager: categoryManager)) {
+                            Image(systemName: "gear")
+                        }
                     }
                 }
             }
@@ -118,6 +124,9 @@ struct ContentView: View {
             DispatchQueue.main.async {
                 switch result {
                 case .success:
+                    // Add to History
+                    historyManager.addEntry(from: taskInput)
+                    
                     //2. Trigger Note Sharing (Optional: User can choose to skip this if they just wanted a reminder)
                     // For this workflow, open the share sheet automatically for the note part
                     ShareSheetApi.share(items: ["\(taskInput.title)\n\n\(taskInput.notes)"])
