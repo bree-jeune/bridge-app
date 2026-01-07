@@ -315,13 +315,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FFC3C3A2F0DF60B00124122 /* BridgeAppUITests.swift in Sources */,
 				1FFC3C472F0DF6FE00124122 /* ReminderService.swift in Sources */,
-				1FFC3C392F0DF60B00124122 /* BridgeAppUITestsLaunchTests.swift in Sources */,
 				1FFD6D642F0DDCD5007FE5D4 /* NoteService.swift in Sources */,
 				1FFC3C4B2F0DF6FE00124122 /* BridgeApp.swift in Sources */,
 				1FFC3C2D2F0DF60B00124122 /* CategoryManager.swift in Sources */,
-				1FFC3C382F0DF60B00124122 /* BridgeAppTests.swift in Sources */,
 				1FFC3C4A2F0DF6FE00124122 /* ContentView.swift in Sources */,
 				1FFC3C312F0DF60B00124122 /* CategorySettingsView.swift in Sources */,
 				1FFC3C372F0DF60B00124122 /* NoteService.swift in Sources */,
@@ -491,7 +488,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BridgeApp/Preview Content\"";
 				DEVELOPMENT_TEAM = C6XH8LAD3Y;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = BridgeApp/Info.plist;
 				INFOPLIST_KEY_NSRemindersUsageDescription = "\"We need access to save your tasks to the correct Reminders list.\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -522,7 +519,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BridgeApp/Preview Content\"";
 				DEVELOPMENT_TEAM = C6XH8LAD3Y;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = BridgeApp/Info.plist;
 				INFOPLIST_KEY_NSRemindersUsageDescription = "\"We need access to save your tasks to the correct Reminders list.\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
