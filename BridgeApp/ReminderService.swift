@@ -7,6 +7,8 @@
 
 import Foundation
 import EventKit
+import UIKit
+import SwiftUI
 
 class ReminderService: ObservableObject {
     private let eventStore = EKEventStore()
@@ -36,21 +38,51 @@ class ReminderService: ObservableObject {
             return
         }
         
-        // Find or create the list (Calendar)
         let calendars = eventStore.calendars(for: .reminder)
-        
         // Try to find a list with the exact name of the Category
-        let targetList = calendars.first(where: { $0.title.lowercased() == input.category.rawValue.lowercased() })
+        let targetList = calendars.first(where: { $0.title.lowercased() == input.category.name.lowercased() })
         
-        guard let list = targetList else {
-            // Optional: Auto-create the list if it doesn't exist?
-            // For now, we fail if the list doesn't exist to encourage setup, or we fall back to default.
-            // Let's fall back to default for safety, but log it.
-            let defaultList = eventStore.defaultCalendarForNewReminders()
-             completion(.failure(NSError(domain: "ReminderService", code: 2, userInfo: [NSLocalizedDescriptionKey: "List '\(input.category.rawValue)' not found. Please create it in Reminders app."])))
+        if let list = targetList {
+            self.saveReminder(input: input, to: list, completion: completion)
+        } else {
+            // List doesn't exist, try to create it
+            createList(for: input.category) { [weak self] result in
+                switch result {
+                case .success(let newList):
+                    self?.saveReminder(input: input, to: newList, completion: completion)
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+        }
+    }
+    
+    private func createList(for category: CategoryModel, completion: @escaping (Result<EKCalendar, Error>) -> Void) {
+        let newList = EKCalendar(for: .reminder, eventStore: eventStore)
+        newList.title = category.name
+        newList.cgColor = UIColor(category.color).cgColor
+        
+        // Find the best source (e.g., iCloud or Local)
+        // Default to the source of the default calendar, or the first available source
+        let defaultCalendar = eventStore.defaultCalendarForNewReminders()
+        let source = defaultCalendar?.source ?? eventStore.sources.first(where: { $0.sourceType == .calDAV || $0.sourceType == .local })
+        
+        guard let targetSource = source else {
+            completion(.failure(NSError(domain: "ReminderService", code: 3, userInfo: [NSLocalizedDescriptionKey: "No suitable source found to create list."])))
             return
         }
         
+        newList.source = targetSource
+        
+        do {
+            try eventStore.saveCalendar(newList, commit: true)
+            completion(.success(newList))
+        } catch {
+            completion(.failure(error))
+        }
+    }
+    
+    private func saveReminder(input: TaskInput, to list: EKCalendar, completion: @escaping (Result<Void, Error>) -> Void) {
         let reminder = EKReminder(eventStore: eventStore)
         reminder.title = input.title
         reminder.notes = input.notes

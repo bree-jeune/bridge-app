@@ -1,0 +1,11 @@
+# Xcode
+.DS_Store
+*/.DS_Store
+*.xcuserstate
+xcuserdata/
+DerivedData/
+build/
+*.os_activity_dt_mode
+
+# Swift Package Manager
+.swiftpm/

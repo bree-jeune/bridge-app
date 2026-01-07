@@ -8,45 +8,33 @@
 import Foundation
 import SwiftUI
 
-/// Represents the distinct list categories defined by the user.
-enum Category: String, CaseIterable, Identifiable {
-    case care = "Care"
-    case order = "Order"
-    case move = "Move"
-    case housekeep = "Housekeep"
-    case administer = "Administer"
-    case develop = "Develop"
-    case entertain = "Entertain"
-    case radar = "Radar"
+import Foundation
+import SwiftUI
+
+/// Represents a user-definable category.
+struct CategoryModel: Identifiable, Codable, Hashable {
+    var id: UUID = UUID()
+    var name: String
+    var iconName: String
+    var colorHex: String
     
-    var id: String { self.rawValue }
-    
-    /// Returns a color associated with the category (optional visual enhancement)
+    // Helper to get Color from hex
     var color: Color {
-        switch self {
-        case .care: return .pink
-        case .order: return .blue
-        case .move: return .green
-        case .housekeep: return .orange
-        case .administer: return .purple
-        case .develop: return .teal
-        case .entertain: return .yellow
-        case .radar: return .gray
-        }
+        Color(hex: colorHex) ?? .gray
     }
     
-    /// A small icon name (SF Symbols) for UI
-    var iconName: String {
-        switch self {
-        case .care: return "heart.fill"
-        case .order: return "tray.full.fill"
-        case .move: return "car.fill"
-        case .housekeep: return "house.fill"
-        case .administer: return "doc.text.fill"
-        case .develop: return "book.fill"
-        case .entertain: return "tv.fill"
-        case .radar: return "antenna.radiowaves.left.and.right"
-        }
+    // Default categories for fresh install
+    static var defaults: [CategoryModel] {
+        [
+            CategoryModel(name: "Care", iconName: "heart.fill", colorHex: "#FF2D55"),      // Pink
+            CategoryModel(name: "Order", iconName: "tray.full.fill", colorHex: "#007AFF"), // Blue
+            CategoryModel(name: "Move", iconName: "car.fill", colorHex: "#34C759"),       // Green
+            CategoryModel(name: "Housekeep", iconName: "house.fill", colorHex: "#FF9500"), // Orange
+            CategoryModel(name: "Administer", iconName: "doc.text.fill", colorHex: "#AF52DE"), // Purple
+            CategoryModel(name: "Develop", iconName: "book.fill", colorHex: "#30B0C7"),    // Teal
+            CategoryModel(name: "Entertain", iconName: "tv.fill", colorHex: "#FFCC00"),    // Yellow
+            CategoryModel(name: "Radar", iconName: "antenna.radiowaves.left.and.right", colorHex: "#8E8E93") // Gray
+        ]
     }
 }
 
@@ -55,6 +43,46 @@ struct TaskInput {
     var title: String = ""
     var notes: String = ""
     var date: Date = Date()
-    var category: Category = .order // Default
+    var category: CategoryModel = CategoryModel.defaults[1] // Default to "Order"
     var hasDueDate: Bool = false
+}
+
+// Helper extension for Hex Color
+extension Color {
+    init?(hex: String) {
+        var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)
+        hexSanitized = hexSanitized.replacingOccurrences(of: "#", with: "")
+
+        var rgb: UInt64 = 0
+
+        var r: CGFloat = 0.0
+        var g: CGFloat = 0.0
+        var b: CGFloat = 0.0
+        var a: CGFloat = 1.0
+
+        let length = hexSanitized.count
+
+        guard Scanner(string: hexSanitized).scanHexInt64(&rgb) else { return nil }
+
+        if length == 6 {
+            r = CGFloat((rgb & 0xFF0000) >> 16) / 255.0
+            g = CGFloat((rgb & 0x00FF00) >> 8) / 255.0
+            b = CGFloat(rgb & 0x0000FF) / 255.0
+        } else if length == 8 {
+            r = CGFloat((rgb & 0xFF000000) >> 24) / 255.0
+            g = CGFloat((rgb & 0x00FF0000) >> 16) / 255.0
+            b = CGFloat((rgb & 0x0000FF00) >> 8) / 255.0
+            a = CGFloat(rgb & 0x000000FF) / 255.0
+        } else {
+            return nil
+        }
+
+        self.init(red: r, green: g, blue: b, opacity: a)
+    }
+    
+    func toHex() -> String? {
+        // Simple implementation for saving colors back if needed later
+        // For now, we rely on the pre-defined hexes in the struct
+        return nil
+    }
 }

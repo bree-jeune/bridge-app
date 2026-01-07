@@ -41,7 +41,7 @@ class NoteService {
     
     private func formatNoteContent(input: TaskInput) -> String {
         var content = "\(input.title)\n"
-        content += "Category: \(input.category.rawValue)\n"
+        content += "Category: \(input.category.name)\n"
         if input.hasDueDate {
             let formatter = DateFormatter()
             formatter.dateStyle = .medium
