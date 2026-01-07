@@ -87,7 +87,7 @@ struct ContentView: View {
                                     VStack {
                                         ZStack {
                                             Circle()
-                                                .fill(isSelected ? category.color : Color.white)
+                                                .fill(isSelected ? category.color : Color(uiColor: .secondarySystemGroupedBackground))
                                                 .shadow(color: category.color.opacity(0.3), radius: isSelected ? 8 : 2)
                                             
                                             Image(systemName: category.iconName)
@@ -119,7 +119,7 @@ struct ContentView: View {
                                         ZStack {
                                             Circle()
                                                 .strokeBorder(Color.gray.opacity(0.3), lineWidth: 1)
-                                                .background(Circle().fill(Color.white))
+                                                .background(Circle().fill(Color(uiColor: .secondarySystemGroupedBackground)))
                                             Image(systemName: "slider.horizontal.3")
                                                 .font(.system(size: 20))
                                                 .foregroundColor(.gray)
@@ -186,13 +186,13 @@ struct ContentView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     HStack {
                         NavigationLink(destination: HistoryView(historyManager: historyManager)) {
-                            Image(systemName: "clock.arrow.circlepath")
-                                .font(.system(size: 14))
-                                .foregroundColor(.primary)
-                                .padding(8)
-                                .background(Color.white)
-                                .clipShape(Circle())
-                                .shadow(radius: 2)
+                                Image(systemName: "clock.arrow.circlepath")
+                                    .font(.system(size: 14))
+                                    .foregroundColor(.primary)
+                                    .padding(8)
+                                    .background(Color(uiColor: .secondarySystemBackground))
+                                    .clipShape(Circle())
+                                    .shadow(radius: 2)
                         }
                         
                         NavigationLink(destination: SettingsView(categoryManager: categoryManager)) {
@@ -200,7 +200,7 @@ struct ContentView: View {
                                 .font(.system(size: 14))
                                 .foregroundColor(.primary)
                                 .padding(8)
-                                .background(Color.white)
+                                .background(Color(uiColor: .secondarySystemBackground))
                                 .clipShape(Circle())
                                 .shadow(radius: 2)
                         }

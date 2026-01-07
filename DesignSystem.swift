@@ -13,7 +13,7 @@ extension Color {
     static let bridgeBlue = Color(hex: "007AFF") ?? .blue
     static let bridgePurple = Color(hex: "5856D6") ?? .purple
     static let bridgePink = Color(hex: "FF2D55") ?? .pink
-    static let bridgeBackground = Color(hex: "F2F2F7") ?? .gray.opacity(0.1) // System grouped background
+    static let bridgeBackground = Color(uiColor: .systemGroupedBackground) // Adaptive System Background
     
     // Gradients
     static var premiumGradient: LinearGradient {
@@ -39,7 +39,7 @@ struct GlassCard: ViewModifier {
     func body(content: Content) -> some View {
         content
             .padding()
-            .background(Color.white)
+            .background(Color(uiColor: .secondarySystemGroupedBackground)) // Adaptive Card Background
             .cornerRadius(16)
             .shadow(color: Color.black.opacity(0.05), radius: 10, x: 0, y: 5)
     }
