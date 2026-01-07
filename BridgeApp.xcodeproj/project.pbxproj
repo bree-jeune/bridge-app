@@ -17,7 +17,6 @@
 		1FFC3C382F0DF60B00124122 /* BridgeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC3C262F0DF60B00124122 /* BridgeAppTests.swift */; };
 		1FFC3C392F0DF60B00124122 /* BridgeAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC3C2B2F0DF60B00124122 /* BridgeAppUITestsLaunchTests.swift */; };
 		1FFC3C3A2F0DF60B00124122 /* BridgeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC3C2C2F0DF60B00124122 /* BridgeAppUITests.swift */; };
-		1FFC3C442F0DF6FE00124122 /* ContentView.swift 18-04-05-827.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC3C3B2F0DF6FD00124122 /* ContentView.swift 18-04-05-827.swift */; };
 		1FFC3C452F0DF6FE00124122 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FFC3C3C2F0DF6FD00124122 /* Assets.xcassets */; };
 		1FFC3C462F0DF6FE00124122 /* Preview Content in Resources */ = {isa = PBXBuildFile; fileRef = 1FFC3C3D2F0DF6FD00124122 /* Preview Content */; };
 		1FFC3C472F0DF6FE00124122 /* ReminderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC3C3E2F0DF6FD00124122 /* ReminderService.swift */; };
@@ -60,7 +59,6 @@
 		1FFC3C272F0DF60B00124122 /* BridgeApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = BridgeApp.xcodeproj; sourceTree = "<group>"; };
 		1FFC3C2B2F0DF60B00124122 /* BridgeAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1FFC3C2C2F0DF60B00124122 /* BridgeAppUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeAppUITests.swift; sourceTree = "<group>"; };
-		1FFC3C3B2F0DF6FD00124122 /* ContentView.swift 18-04-05-827.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ContentView.swift 18-04-05-827.swift"; sourceTree = "<group>"; };
 		1FFC3C3C2F0DF6FD00124122 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FFC3C3D2F0DF6FD00124122 /* Preview Content */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Preview Content"; sourceTree = "<group>"; };
 		1FFC3C3E2F0DF6FD00124122 /* ReminderService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderService.swift; sourceTree = "<group>"; };
@@ -106,7 +104,6 @@
 				1FFC3C3C2F0DF6FD00124122 /* Assets.xcassets */,
 				1FFC3C422F0DF6FE00124122 /* BridgeApp.swift */,
 				1FFC3C412F0DF6FD00124122 /* ContentView.swift */,
-				1FFC3C3B2F0DF6FD00124122 /* ContentView.swift 18-04-05-827.swift */,
 				1FFC3C402F0DF6FD00124122 /* Info.plist */,
 				1FFC3C3F2F0DF6FD00124122 /* Models.swift */,
 				1FFC3C432F0DF6FE00124122 /* Preview Assets.xcassets */,
@@ -322,7 +319,6 @@
 				1FFC3C472F0DF6FE00124122 /* ReminderService.swift in Sources */,
 				1FFC3C392F0DF60B00124122 /* BridgeAppUITestsLaunchTests.swift in Sources */,
 				1FFD6D642F0DDCD5007FE5D4 /* NoteService.swift in Sources */,
-				1FFC3C442F0DF6FE00124122 /* ContentView.swift 18-04-05-827.swift in Sources */,
 				1FFC3C4B2F0DF6FE00124122 /* BridgeApp.swift in Sources */,
 				1FFC3C2D2F0DF60B00124122 /* CategoryManager.swift in Sources */,
 				1FFC3C382F0DF60B00124122 /* BridgeAppTests.swift in Sources */,
