@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F1131762F0DBFA7002BDD00 /* BridgeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1131752F0DBFA7002BDD00 /* BridgeApp.swift */; };
-		1F11317A2F0DBFAC002BDD00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F1131792F0DBFAC002BDD00 /* Assets.xcassets */; };
-		1F11317D2F0DBFAC002BDD00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F11317C2F0DBFAC002BDD00 /* Preview Assets.xcassets */; };
 		1F1131872F0DBFAC002BDD00 /* BridgeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1131862F0DBFAC002BDD00 /* BridgeAppTests.swift */; };
 		1F1131912F0DBFAC002BDD00 /* BridgeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1131902F0DBFAC002BDD00 /* BridgeAppUITests.swift */; };
 		1F1131932F0DBFAC002BDD00 /* BridgeAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1131922F0DBFAC002BDD00 /* BridgeAppUITestsLaunchTests.swift */; };
-		1F1131A02F0DC102002BDD00 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F11319F2F0DC102002BDD00 /* ContentView.swift */; };
-		1FFD6D602F0DDC56007FE5D4 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6D5F2F0DDC56007FE5D4 /* Models.swift */; };
-		1FFD6D622F0DDC87007FE5D4 /* ReminderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6D612F0DDC87007FE5D4 /* ReminderService.swift */; };
+		1FFC3C2D2F0DF60B00124122 /* CategoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC3C192F0DF60B00124122 /* CategoryManager.swift */; };
+		1FFC3C312F0DF60B00124122 /* CategorySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC3C1E2F0DF60B00124122 /* CategorySettingsView.swift */; };
+		1FFC3C322F0DF60B00124122 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1FFC3C1F2F0DF60B00124122 /* .gitignore */; };
+		1FFC3C372F0DF60B00124122 /* NoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC3C242F0DF60B00124122 /* NoteService.swift */; };
+		1FFC3C382F0DF60B00124122 /* BridgeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC3C262F0DF60B00124122 /* BridgeAppTests.swift */; };
+		1FFC3C392F0DF60B00124122 /* BridgeAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC3C2B2F0DF60B00124122 /* BridgeAppUITestsLaunchTests.swift */; };
+		1FFC3C3A2F0DF60B00124122 /* BridgeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC3C2C2F0DF60B00124122 /* BridgeAppUITests.swift */; };
+		1FFC3C442F0DF6FE00124122 /* ContentView.swift 18-04-05-827.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC3C3B2F0DF6FD00124122 /* ContentView.swift 18-04-05-827.swift */; };
+		1FFC3C452F0DF6FE00124122 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FFC3C3C2F0DF6FD00124122 /* Assets.xcassets */; };
+		1FFC3C462F0DF6FE00124122 /* Preview Content in Resources */ = {isa = PBXBuildFile; fileRef = 1FFC3C3D2F0DF6FD00124122 /* Preview Content */; };
+		1FFC3C472F0DF6FE00124122 /* ReminderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC3C3E2F0DF6FD00124122 /* ReminderService.swift */; };
+		1FFC3C482F0DF6FE00124122 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC3C3F2F0DF6FD00124122 /* Models.swift */; };
+		1FFC3C4A2F0DF6FE00124122 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC3C412F0DF6FD00124122 /* ContentView.swift */; };
+		1FFC3C4B2F0DF6FE00124122 /* BridgeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFC3C422F0DF6FE00124122 /* BridgeApp.swift */; };
+		1FFC3C4C2F0DF6FE00124122 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FFC3C432F0DF6FE00124122 /* Preview Assets.xcassets */; };
 		1FFD6D642F0DDCD5007FE5D4 /* NoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6D632F0DDCD5007FE5D4 /* NoteService.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,19 +47,29 @@
 
 /* Begin PBXFileReference section */
 		1F1131722F0DBFA7002BDD00 /* BridgeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BridgeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F1131752F0DBFA7002BDD00 /* BridgeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeApp.swift; sourceTree = "<group>"; };
-		1F1131792F0DBFAC002BDD00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1F11317C2F0DBFAC002BDD00 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1F1131822F0DBFAC002BDD00 /* BridgeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BridgeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F1131862F0DBFAC002BDD00 /* BridgeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeAppTests.swift; sourceTree = "<group>"; };
 		1F11318C2F0DBFAC002BDD00 /* BridgeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BridgeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F1131902F0DBFAC002BDD00 /* BridgeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeAppUITests.swift; sourceTree = "<group>"; };
 		1F1131922F0DBFAC002BDD00 /* BridgeAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		1F11319F2F0DC102002BDD00 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		1FFD6D5F2F0DDC56007FE5D4 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		1FFD6D612F0DDC87007FE5D4 /* ReminderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderService.swift; sourceTree = "<group>"; };
+		1FFC3C192F0DF60B00124122 /* CategoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryManager.swift; sourceTree = "<group>"; };
+		1FFC3C1E2F0DF60B00124122 /* CategorySettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySettingsView.swift; sourceTree = "<group>"; };
+		1FFC3C1F2F0DF60B00124122 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		1FFC3C242F0DF60B00124122 /* NoteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteService.swift; sourceTree = "<group>"; };
+		1FFC3C262F0DF60B00124122 /* BridgeAppTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeAppTests.swift; sourceTree = "<group>"; };
+		1FFC3C272F0DF60B00124122 /* BridgeApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = BridgeApp.xcodeproj; sourceTree = "<group>"; };
+		1FFC3C2B2F0DF60B00124122 /* BridgeAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1FFC3C2C2F0DF60B00124122 /* BridgeAppUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeAppUITests.swift; sourceTree = "<group>"; };
+		1FFC3C3B2F0DF6FD00124122 /* ContentView.swift 18-04-05-827.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ContentView.swift 18-04-05-827.swift"; sourceTree = "<group>"; };
+		1FFC3C3C2F0DF6FD00124122 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1FFC3C3D2F0DF6FD00124122 /* Preview Content */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Preview Content"; sourceTree = "<group>"; };
+		1FFC3C3E2F0DF6FD00124122 /* ReminderService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderService.swift; sourceTree = "<group>"; };
+		1FFC3C3F2F0DF6FD00124122 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		1FFC3C402F0DF6FD00124122 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FFC3C412F0DF6FD00124122 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1FFC3C422F0DF6FE00124122 /* BridgeApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeApp.swift; sourceTree = "<group>"; };
+		1FFC3C432F0DF6FE00124122 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1FFD6D632F0DDCD5007FE5D4 /* NoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteService.swift; sourceTree = "<group>"; };
-		1FFD6D652F0DDD72007FE5D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +100,20 @@
 		1F1131692F0DBFA7002BDD00 = {
 			isa = PBXGroup;
 			children = (
+				1FFC3C1F2F0DF60B00124122 /* .gitignore */,
+				1FFC3C1E2F0DF60B00124122 /* CategorySettingsView.swift */,
+				1FFC3C192F0DF60B00124122 /* CategoryManager.swift */,
+				1FFC3C3C2F0DF6FD00124122 /* Assets.xcassets */,
+				1FFC3C422F0DF6FE00124122 /* BridgeApp.swift */,
+				1FFC3C412F0DF6FD00124122 /* ContentView.swift */,
+				1FFC3C3B2F0DF6FD00124122 /* ContentView.swift 18-04-05-827.swift */,
+				1FFC3C402F0DF6FD00124122 /* Info.plist */,
+				1FFC3C3F2F0DF6FD00124122 /* Models.swift */,
+				1FFC3C432F0DF6FE00124122 /* Preview Assets.xcassets */,
+				1FFC3C3D2F0DF6FD00124122 /* Preview Content */,
+				1FFC3C3E2F0DF6FD00124122 /* ReminderService.swift */,
+				1FFC3C172F0DF60B00124122 /* BridgeApp */,
 				1FFD6D632F0DDCD5007FE5D4 /* NoteService.swift */,
-				1F1131742F0DBFA7002BDD00 /* BridgeApp */,
 				1F1131852F0DBFAC002BDD00 /* BridgeAppTests */,
 				1F11318F2F0DBFAC002BDD00 /* BridgeAppUITests */,
 				1F1131732F0DBFA7002BDD00 /* Products */,
@@ -99,28 +130,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1F1131742F0DBFA7002BDD00 /* BridgeApp */ = {
-			isa = PBXGroup;
-			children = (
-				1FFD6D652F0DDD72007FE5D4 /* Info.plist */,
-				1F1131752F0DBFA7002BDD00 /* BridgeApp.swift */,
-				1F1131792F0DBFAC002BDD00 /* Assets.xcassets */,
-				1F11317B2F0DBFAC002BDD00 /* Preview Content */,
-				1F11319F2F0DC102002BDD00 /* ContentView.swift */,
-				1FFD6D5F2F0DDC56007FE5D4 /* Models.swift */,
-				1FFD6D612F0DDC87007FE5D4 /* ReminderService.swift */,
-			);
-			path = BridgeApp;
-			sourceTree = "<group>";
-		};
-		1F11317B2F0DBFAC002BDD00 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				1F11317C2F0DBFAC002BDD00 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
 		1F1131852F0DBFAC002BDD00 /* BridgeAppTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +143,39 @@
 			children = (
 				1F1131902F0DBFAC002BDD00 /* BridgeAppUITests.swift */,
 				1F1131922F0DBFAC002BDD00 /* BridgeAppUITestsLaunchTests.swift */,
+			);
+			path = BridgeAppUITests;
+			sourceTree = "<group>";
+		};
+		1FFC3C172F0DF60B00124122 /* BridgeApp */ = {
+			isa = PBXGroup;
+			children = (
+				1FFC3C242F0DF60B00124122 /* NoteService.swift */,
+				1FFC3C252F0DF60B00124122 /* BridgeAppTests */,
+				1FFC3C272F0DF60B00124122 /* BridgeApp.xcodeproj */,
+				1FFC3C2A2F0DF60B00124122 /* BridgeAppUITests */,
+			);
+			name = BridgeApp;
+			sourceTree = "<group>";
+		};
+		1FFC3C252F0DF60B00124122 /* BridgeAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				1FFC3C262F0DF60B00124122 /* BridgeAppTests.swift */,
+			);
+			path = BridgeAppTests;
+			sourceTree = "<group>";
+		};
+		1FFC3C282F0DF60B00124122 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1FFC3C2A2F0DF60B00124122 /* BridgeAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1FFC3C2B2F0DF60B00124122 /* BridgeAppUITestsLaunchTests.swift */,
+				1FFC3C2C2F0DF60B00124122 /* BridgeAppUITests.swift */,
 			);
 			path = BridgeAppUITests;
 			sourceTree = "<group>";
@@ -228,6 +270,12 @@
 			mainGroup = 1F1131692F0DBFA7002BDD00;
 			productRefGroup = 1F1131732F0DBFA7002BDD00 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1FFC3C282F0DF60B00124122 /* Products */;
+					ProjectRef = 1FFC3C272F0DF60B00124122 /* BridgeApp.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1F1131712F0DBFA7002BDD00 /* BridgeApp */,
@@ -242,8 +290,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F11317D2F0DBFAC002BDD00 /* Preview Assets.xcassets in Resources */,
-				1F11317A2F0DBFAC002BDD00 /* Assets.xcassets in Resources */,
+				1FFC3C322F0DF60B00124122 /* .gitignore in Resources */,
+				1FFC3C462F0DF6FE00124122 /* Preview Content in Resources */,
+				1FFC3C4C2F0DF6FE00124122 /* Preview Assets.xcassets in Resources */,
+				1FFC3C452F0DF6FE00124122 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,11 +318,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FFD6D602F0DDC56007FE5D4 /* Models.swift in Sources */,
-				1F1131A02F0DC102002BDD00 /* ContentView.swift in Sources */,
-				1F1131762F0DBFA7002BDD00 /* BridgeApp.swift in Sources */,
+				1FFC3C3A2F0DF60B00124122 /* BridgeAppUITests.swift in Sources */,
+				1FFC3C472F0DF6FE00124122 /* ReminderService.swift in Sources */,
+				1FFC3C392F0DF60B00124122 /* BridgeAppUITestsLaunchTests.swift in Sources */,
 				1FFD6D642F0DDCD5007FE5D4 /* NoteService.swift in Sources */,
-				1FFD6D622F0DDC87007FE5D4 /* ReminderService.swift in Sources */,
+				1FFC3C442F0DF6FE00124122 /* ContentView.swift 18-04-05-827.swift in Sources */,
+				1FFC3C4B2F0DF6FE00124122 /* BridgeApp.swift in Sources */,
+				1FFC3C2D2F0DF60B00124122 /* CategoryManager.swift in Sources */,
+				1FFC3C382F0DF60B00124122 /* BridgeAppTests.swift in Sources */,
+				1FFC3C4A2F0DF6FE00124122 /* ContentView.swift in Sources */,
+				1FFC3C312F0DF60B00124122 /* CategorySettingsView.swift in Sources */,
+				1FFC3C372F0DF60B00124122 /* NoteService.swift in Sources */,
+				1FFC3C482F0DF6FE00124122 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
