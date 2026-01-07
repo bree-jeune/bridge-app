@@ -28,12 +28,19 @@ struct CategoryModel: Identifiable, Codable, Hashable {
         [
             CategoryModel(name: "Care", iconName: "heart.fill", colorHex: "#FF2D55"),      // Pink
             CategoryModel(name: "Order", iconName: "tray.full.fill", colorHex: "#007AFF"), // Blue
-            CategoryModel(name: "Move", iconName: "car.fill", colorHex: "#34C759"),       // Green
-            CategoryModel(name: "Housekeep", iconName: "house.fill", colorHex: "#FF9500"), // Orange
-            CategoryModel(name: "Administer", iconName: "doc.text.fill", colorHex: "#AF52DE"), // Purple
+            CategoryModel(name: "Move", iconName: "archivebox.fill", colorHex: "#34C759"), // Green
+            CategoryModel(name: "Housekeeping", iconName: "house.fill", colorHex: "#FF9500"), // Orange
+            CategoryModel(name: "Admin", iconName: "doc.text.fill", colorHex: "#AF52DE"),  // Purple
             CategoryModel(name: "Develop", iconName: "book.fill", colorHex: "#30B0C7"),    // Teal
-            CategoryModel(name: "Entertain", iconName: "tv.fill", colorHex: "#FFCC00"),    // Yellow
-            CategoryModel(name: "Radar", iconName: "antenna.radiowaves.left.and.right", colorHex: "#8E8E93") // Gray
+            CategoryModel(name: "Entertainment", iconName: "tv.fill", colorHex: "#FFCC00"), // Yellow
+            CategoryModel(name: "Radar", iconName: "antenna.radiowaves.left.and.right", colorHex: "#8E8E93"), // Gray
+            
+            // New Categories
+            CategoryModel(name: "Groceries", iconName: "cart.fill", colorHex: "#4CAF50"),  // Green
+            CategoryModel(name: "Medications", iconName: "pills.fill", colorHex: "#F44336"), // Red
+            CategoryModel(name: "Personal", iconName: "person.fill", colorHex: "#2196F3"), // Blue
+            CategoryModel(name: "Appointments", iconName: "calendar", colorHex: "#9C27B0"), // Purple
+            CategoryModel(name: "Meetings", iconName: "person.3.fill", colorHex: "#3F51B5") // Dark Blue
         ]
     }
 }
